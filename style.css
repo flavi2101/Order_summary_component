@@ -1,40 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
-*{
-  --primary-pale-blue:hsl(225, 100%, 94%);
-  --primary-bright-blue:hsl(245, 75%, 52%);
-  --Very-pale-blue: hsl(225, 100%, 98%);
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  --Very-pale-blue: hsl(228, 100%, 98%);
+  --primary-pale-blue: hsl(225, 100%, 94%);
+  --primary-bright-blue: rgb(56, 41, 224);
   --Desaturated-blue: hsl(224, 23%, 55%);
   --Dark-blue: hsl(223, 47%, 23%);
 
   font-size: 16px;
-  font-family: 'Overpass', sans-serif;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: "Red Hat Display", sans-serif;
+  font-style: normal;
+  font-weight: inherit;
 }
 
-
-
 @media screen and (max-width: 376px) {
-  html{
+  html {
     background-color: var(--Desaturated-blue);
-
   }
-  body{
-
+  body {
     display: flex;
-    background-color: var(--Very-pale-blue) ;
+    background-color: var(--Very-pale-blue);
     flex-direction: column;
     margin-block: 79px;
-    margin-inline: 25px;
+    margin-inline: 10;
     border-radius: 21px;
     align-items: center;
-    inline-size: 325px;
+    inline-size: 355px;
   }
 
   aside {
     inline-size: inherit;
   }
 
-  aside > img{
+  aside > img {
     inline-size: inherit;
     border-radius: 21px 21px 0px 0px;
   }
@@ -46,25 +43,57 @@
     margin-block-start: 32px;
   }
 
-  p{
+  p {
     display: inline;
-    padding-inline: 1.7rem;
+    padding-inline-start: 2rem;
+    padding-inline-end: 3rem;
     text-align: center;
     line-height: 1.8rem;
     color: var(--Dark-blue);
+    opacity: 0.9;
   }
 
   div {
     display: flex;
+    align-items: center;
     flex-direction: row;
     border-radius: 1.5rem;
     block-size: 88px;
-    margin-inline: 25px;
-    background-color: var(--primary-pale-blue);
+    background-color: rgba(224, 232, 255, 0.3);
+    inline-size: calc(325px - 50px);
+    justify-content: space-evenly;
   }
-  .validator{
+
+  div img {
+    background-color: var(--primary-pale-blue);
+    border-radius: 100%;
+    border: none;
+  }
+
+  hgroup h1,
+  h2 {
+    line-height: 0.6rem;
+  }
+
+  hgroup h1 {
+    color: var(--Dark-blue);
+    font-weight: 700;
+  }
+
+  hgroup h2 {
+    font-weight: normal;
+    color: var(--Desaturated-blue);
+    opacity: 0.9;
+  }
+
+  div a {
+    font-weight: 700;
+    color: var(--Dark-blue);
+  }
+
+  .validator {
     position: absolute;
-    inset-block-end: 10px;
+    inset-block-start: 25px;
     inset-inline-start: 25px;
     margin-inline: 0;
     margin-block: 0;
@@ -72,7 +101,30 @@
     padding-block: 0;
   }
 
+  button {
+    margin-block-start: 28px;
+    inline-size: calc(325px - 50px);
+    block-size: 3rem;
+    border-radius: 10px;
+    background-color: var(--primary-bright-blue);
+    color: var(--Very-pale-blue);
+    box-shadow: 0px 15px 25px rgba(56, 41, 224, 0.5);
+  }
+  button:hover {
+    background-color: var(--primary-bright-blue);
+    opacity: 0.7;
+  }
+  body > strong {
+    margin-block: 1.2rem 1.8rem;
+    font-weight: 700;
+    color: var(--Dark-blue);
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  strong > a :hover {
+    color: var(--Dark-blue);
+  }
 }
-
-
 

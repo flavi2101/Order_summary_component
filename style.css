@@ -1,1 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+*{
+  --primary-pale-blue:hsl(225, 100%, 94%);
+  --primary-bright-blue:hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+
+  font-size: 16px;
+  font-family: 'Overpass', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+
+
+@media screen and (max-width: 376px) {
+  html{
+    background-color: var(--Desaturated-blue);
+
+  }
+  body{
+
+    display: flex;
+    background-color: var(--Very-pale-blue) ;
+    flex-direction: column;
+    margin-block: 79px;
+    margin-inline: 25px;
+    border-radius: 21px;
+    align-items: center;
+    inline-size: 325px;
+  }
+
+  aside {
+    inline-size: inherit;
+  }
+
+  aside > img{
+    inline-size: inherit;
+    border-radius: 21px 21px 0px 0px;
+  }
+
+  aside ~ h1 {
+    font-size: 1.5rem;
+    color: var(--Dark-blue);
+    margin-block-start: 42px;
+    margin-block-start: 32px;
+  }
+
+  p{
+    display: inline;
+    padding-inline: 1.7rem;
+    text-align: center;
+    line-height: 1.8rem;
+    color: var(--Dark-blue);
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    border-radius: 1.5rem;
+    block-size: 88px;
+    margin-inline: 25px;
+    background-color: var(--primary-pale-blue);
+  }
+  .validator{
+    position: absolute;
+    inset-block-end: 10px;
+    inset-inline-start: 25px;
+    margin-inline: 0;
+    margin-block: 0;
+    padding-inline: 0;
+    padding-block: 0;
+  }
+
+}
+
+
 

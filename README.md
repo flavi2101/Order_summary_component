@@ -1,4 +1,4 @@
-# Raiting Component
+# Order Sumary Component
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/flavi2101/Order_summary_component/blob/main/LICENSE) 
 
 # Sobre o projeto

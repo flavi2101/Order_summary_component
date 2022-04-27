@@ -1,30 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap");
 * {
-  --Very-pale-blue: hsl(228, 100%, 98%);
-  --primary-pale-blue: hsl(225, 100%, 94%);
-  --primary-bright-blue: rgb(56, 41, 224);
-  --Desaturated-blue: hsl(224, 23%, 55%);
   --Dark-blue: hsl(223, 47%, 23%);
-
-  font-size: 16px;
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Very-pale-blue: hsl(228, 100%, 98%);
+  --primary-bright-blue: rgb(56, 41, 224);
+  --primary-pale-blue: hsl(225, 100%, 94%);
   font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
   font-style: normal;
   font-weight: inherit;
 }
 
 @media screen and (max-width: 376px) {
+  a :hover {
+    color: var(--Dark-blue);
+  }
+  button:hover {
+    background-color: var(--primary-bright-blue);
+    opacity: 0.7;
+  }
   html {
     background-color: var(--Desaturated-blue);
   }
   body {
-    display: flex;
-    background-color: var(--Very-pale-blue);
-    flex-direction: column;
-    margin-block: 79px;
-    margin-inline: 10;
-    border-radius: 21px;
     align-items: center;
+    background-color: var(--Very-pale-blue);
+    border-radius: 21px;
+    display: flex;
+    flex-direction: column;
     inline-size: 355px;
+    margin-block: 79px;
+    margin-inline: 10px;
   }
 
   aside {
@@ -32,34 +37,35 @@
   }
 
   aside > img {
-    inline-size: inherit;
     border-radius: 21px 21px 0px 0px;
+    inline-size: inherit;
   }
 
   aside ~ h1 {
-    font-size: 1.5rem;
     color: var(--Dark-blue);
-    margin-block-start: 42px;
+    font-size: 1.5rem;
+    font-weight: bold;
     margin-block-start: 32px;
+    margin-block-start: 42px;
   }
 
   p {
-    display: inline;
-    padding-inline-start: 2rem;
-    padding-inline-end: 3rem;
-    text-align: center;
-    line-height: 1.8rem;
     color: var(--Dark-blue);
+    display: inline;
+    line-height: 1.8rem;
     opacity: 0.9;
+    padding-inline-end: 3rem;
+    padding-inline-start: 2rem;
+    text-align: center;
   }
 
   div {
-    display: flex;
     align-items: center;
-    flex-direction: row;
-    border-radius: 1.5rem;
-    block-size: 88px;
     background-color: rgba(224, 232, 255, 0.3);
+    block-size: 88px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: row;
     inline-size: calc(325px - 50px);
     justify-content: space-evenly;
   }
@@ -81,50 +87,166 @@
   }
 
   hgroup h2 {
-    font-weight: normal;
     color: var(--Desaturated-blue);
+    font-weight: normal;
     opacity: 0.9;
   }
 
   div a {
-    font-weight: 700;
     color: var(--Dark-blue);
+    font-weight: 700;
   }
 
   .validator {
-    position: absolute;
     inset-block-start: 25px;
     inset-inline-start: 25px;
-    margin-inline: 0;
     margin-block: 0;
-    padding-inline: 0;
+    margin-inline: 0;
     padding-block: 0;
+    padding-inline: 0;
+    position: absolute;
   }
 
   button {
-    margin-block-start: 28px;
-    inline-size: calc(325px - 50px);
+    background-color: var(--primary-bright-blue);
     block-size: 3rem;
     border-radius: 10px;
-    background-color: var(--primary-bright-blue);
-    color: var(--Very-pale-blue);
     box-shadow: 0px 15px 25px rgba(56, 41, 224, 0.5);
+    color: var(--Very-pale-blue);
+    inline-size: calc(325px - 50px);
+    margin-block-start: 28px;
+  }
+  body > strong {
+    color: var(--Dark-blue);
+    font-weight: 700;
+    margin-block: 1.2rem 1.8rem;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  strong > a:hover {
+    color: var(--Dark-blue);
+  }
+
+}
+
+
+  html {
+    background-color: var(--Desaturated-blue);
+    block-size: 100vh;
+    margin-block: 0;
+    margin: 75px;
+    text-align: center;
+  }
+  body {
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    border-radius: 21px;
+    display: inline-flex;
+    flex-direction: column;
+    inline-size: 355px;
+  }
+
+  aside {
+    inline-size: inherit;
+  }
+
+  aside > img {
+    border-radius: 21px 21px 0px 0px;
+    inline-size: inherit;
+  }
+
+  aside ~ h1 {
+    color: var(--Dark-blue);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-block-start: 32px;
+    margin-block-start: 42px;
+  }
+
+  p {
+    color: var(--Dark-blue);
+    display: inline;
+    line-height: 1.8rem;
+    opacity: 0.9;
+    padding-inline-end: 3rem;
+    padding-inline-start: 2rem;
+    text-align: center;
+  }
+
+  div {
+    align-items: center;
+    background-color: rgba(224, 232, 255, 0.3);
+    block-size: 88px;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    inline-size: calc(325px - 50px);
+    justify-content: space-evenly;
+  }
+
+  div img {
+    background-color: var(--primary-pale-blue);
+    border-radius: 100%;
+    border: none;
+  }
+
+  hgroup h1,
+  h2 {
+    line-height: 0.6rem;
+  }
+
+  hgroup h1 {
+    color: var(--Dark-blue);
+    font-weight: 700;
+  }
+
+  hgroup h2 {
+    color: var(--Desaturated-blue);
+    font-weight: normal;
+    opacity: 0.9;
+  }
+
+  div a {
+    color: var(--Dark-blue);
+    font-weight: 700;
+  }
+
+  .validator {
+    inset-block-end: 25px;
+    inset-inline-start: 25px;
+    margin-block: 0;
+    margin-inline: 0;
+    padding-block: 0;
+    padding-inline: 0;
+    position: absolute;
+  }
+
+  button {
+    background-color: var(--primary-bright-blue);
+    block-size: 3rem;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 15px 25px rgba(56, 41, 224, 0.5);
+    color: var(--Very-pale-blue);
+    inline-size: calc(325px - 50px);
+    margin-block-start: 28px;
   }
   button:hover {
     background-color: var(--primary-bright-blue);
     opacity: 0.7;
   }
   body > strong {
-    margin-block: 1.2rem 1.8rem;
-    font-weight: 700;
     color: var(--Dark-blue);
+    font-weight: 700;
+    margin-block: 1.2rem 1.8rem;
   }
   a {
+    color: var(--Desaturated-blue);
     text-decoration: none;
-    color: inherit;
   }
-  strong > a :hover {
+  strong > a:hover {
     color: var(--Dark-blue);
   }
-}
 

@@ -23,25 +23,29 @@
   }
   body {
     align-items: center;
+    background-color: var(--Desaturated-blue);
+    block-size: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+  }
+  main {
+    align-items: center;
     background-color: var(--Very-pale-blue);
     border-radius: 21px;
     display: flex;
     flex-direction: column;
     inline-size: 355px;
-    margin-block: 79px;
-    margin-inline: 10px;
+    block-size: fit-content;
   }
 
-  aside {
-    inline-size: inherit;
-  }
-
-  aside > img {
+  main > img {
     border-radius: 21px 21px 0px 0px;
     inline-size: inherit;
   }
 
-  aside ~ h1 {
+  main > h1 {
     color: var(--Dark-blue);
     font-size: 1.5rem;
     font-weight: bold;
@@ -116,7 +120,7 @@
     inline-size: calc(325px - 50px);
     margin-block-start: 28px;
   }
-  body > strong {
+  main > strong {
     color: var(--Dark-blue);
     font-weight: 700;
     margin-block: 1.2rem 1.8rem;
@@ -128,36 +132,33 @@
   strong > a:hover {
     color: var(--Dark-blue);
   }
-
 }
-
-
-  html {
+@media screen and (max-width: 2140px) {
+  body {
+    align-items: center;
     background-color: var(--Desaturated-blue);
     block-size: 100vh;
-    margin-block: 0;
-    margin: 75px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
   }
-  body {
+  main {
     align-items: center;
     background-color: var(--Very-pale-blue);
     border-radius: 21px;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     inline-size: 355px;
+    block-size: fit-content;
   }
 
-  aside {
-    inline-size: inherit;
-  }
-
-  aside > img {
+  main > img {
     border-radius: 21px 21px 0px 0px;
     inline-size: inherit;
   }
 
-  aside ~ h1 {
+  main > h1 {
     color: var(--Dark-blue);
     font-size: 1.5rem;
     font-weight: bold;
@@ -214,7 +215,7 @@
   }
 
   .validator {
-    inset-block-end: 25px;
+    inset-block-start: 25px;
     inset-inline-start: 25px;
     margin-block: 0;
     margin-inline: 0;
@@ -237,7 +238,7 @@
     background-color: var(--primary-bright-blue);
     opacity: 0.7;
   }
-  body > strong {
+  main > strong {
     color: var(--Dark-blue);
     font-weight: 700;
     margin-block: 1.2rem 1.8rem;
@@ -249,4 +250,4 @@
   strong > a:hover {
     color: var(--Dark-blue);
   }
-
+}
